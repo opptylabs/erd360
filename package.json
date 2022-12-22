@@ -1,0 +1,40 @@
+{
+  "name": "erd360",
+  "description": "One page wallet viewer for Elrond",
+  "license" : "GPL-3.0-or-later",
+  "author": {
+    "name" : "Oppty",
+    "url" : "https://twitter.com/0xOppty"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm install --no-bin-links && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@elrondnetwork/erdjs": "^11.1.0",
+    "@elrondnetwork/erdjs-network-providers": "^1.1.1",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.26.0",
+    "bignumber.js": "^9.0.2",
+    "chart.js": "^3.7.1",
+    "cheerio": "^1.0.0-rc.10",
+    "chrome-aws-lambda": "^9.1.0",
+    "graphql-request": "^4.0.0",
+    "gray-matter": "^4.0.3",
+    "ioredis": "^4.28.5",
+    "lodash": "^4.17.21",
+    "next": "latest",
+    "postcss": "^8.4.14",
+    "puppeteer": "^13.3.2",
+    "react": "17.0.2",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "17.0.2",
+    "redis": "^4.0.4",
+    "swr": "^1.2.1",
+    "tailwindcss": "^3.1.8"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "erd360",
+    "short_name": "erd360",
+    "icons": [
+        {
+            "src": "android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#18191a",
+    "background_color": "#18191a",
+    "display": "standalone"
+}

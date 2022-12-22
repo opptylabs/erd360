@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-black text-white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    h1 {
+        @apply text-2xl my-1;
+    }
+    h2 {
+        @apply text-xl my-1;
+    }
+    h3 {
+        @apply text-lg my-1;
+    }
+    a {
+        @apply text-blue
+    }
+    a:hover {
+        @apply text-blue-light
+    }
+    .btn {
+        @apply py-2 px-4 border-blue text-blue ease-in-out duration-300;
+    }
+    :not([role=group]) > .btn {
+        @apply rounded border;
+    }
+    [role=group] > .btn {
+        @apply border-t border-b;
+    }
+    [role=group] > .btn:first-child {
+        @apply rounded-l border-l;
+    }
+    [role=group] > .btn:last-child {
+        @apply rounded-r border-r;
+    }
+    .btn-sm {
+        @apply py-1 px-2;
+    }
+    .btn:hover:not(.disabled) {
+        @apply bg-blue-light text-white;
+    }
+    .disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+    .btn-primary {
+        @apply btn bg-blue-light text-white
+    }
+    .btn-primary:hover:not(.disabled) {
+        @apply bg-blue;
+    }
+    ul {
+        @apply list-disc list-inside;
+    }
+
+    select {
+        @apply py-0 px-4 border-blue text-white ease-in-out duration-300 bg-black rounded;
+    }
+
+    table {
+        @apply min-w-full divide-y divide-grey-500 bg-grey-300;
+    }
+    table th {
+        @apply px-4 py-3 text-left text-xs font-medium tracking-wider;
+    }
+    table tbody {
+        @apply divide-y divide-grey-500;
+    }
+    table td {
+        @apply px-4 py-3 whitespace-nowrap;
+    }
+    table tfoot {
+        @apply bg-grey-400;
+    }
+
+    .logo .inverse,
+    .loader {
+        transform: scale(-1, 1)
+    }
+    .logo:hover .inverse {
+        animation: spinner 3s linear infinite;
+    }
+    .loader {
+        animation: spinner 1.5s linear infinite;
+    }
+    @keyframes spinner {
+        0% { transform: scale(-1, 1) rotate(360deg) }
+        100% { transform: scale(-1, 1) rotate(0deg) }
+    }
+    .animate-blink {
+        animation: 1s blink infinite
+    }
+    @keyframes blink {
+        50% {
+            color: transparent
+        }
+    }
+
+    .trim-wrapper {
+        @apply inline-flex max-w-sm overflow-hidden;
+    }
+
+    .trim {
+        @apply flex max-w-full overflow-hidden relative whitespace-nowrap;
+    }
+
+    .trim .hidden-text-ref {
+        @apply absolute block text-transparent;
+    }
+
+    .trim span.hidden-text-ref {
+        @apply !text-transparent;
+    }
+
+    .trim .left {
+        @apply shrink text-transparent overflow-hidden overflow-ellipsis;
+        font-size: 1px;
+    }
+
+    .trim.overflow .ellipsis {
+        @apply block;
+    }
+
+    .trim .ellipsis {
+        @apply shrink-0 hidden pointer-events-none select-none;
+    }
+
+    .trim .right {
+        @apply shrink text-transparent overflow-hidden overflow-ellipsis whitespace-nowrap;
+        font-size: 1px;
+        direction: rtl;
+    }
+
+    .trim .left span,
+    .trim .right span {
+        @apply text-white text-base pointer-events-none select-none;
+    }
+
+    h1 .trim .left span,
+    h1 .trim .right span {
+        @apply text-2xl;
+    }
+    h2 .trim .left span,
+    h2 .trim .right span {
+        @apply text-xl;
+    }
+    h3 .trim .left span,
+    h3 .trim .right span {
+        @apply text-lg;
+    }
+}
